@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technology - Educaba</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; transition: background 0.3s, color 0.3s; }
+    .dark-mode { background: #121212; color: #fff; }
+
+    .navbar {
+      background-color: #4a90e2;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    .menu-icon, .toggle-icon {
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .card-content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .back-home {
+      display: block;
+      width: max-content;
+      margin: 30px auto 0;
+      padding: 10px 25px;
+      background: #4a90e2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .back-home:hover {
+      background: #357ac7;
+    }
+
+    .dark-mode .card {
+      background: #1f1f1f;
+      color: white;
+    }
+    .dark-mode .back-home {
+      background: #333;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 24px; }
+      .card img { height: 180px; }
+      .card-content h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h2>Educaba - Technology</h2>
+    <span class="material-icons toggle-icon" onclick="toggleMode()">brightness_6</span>
+  </div>
+
+  <div class="container">
+    <h1 class="title">Latest in Technology</h1>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?w=800" alt="AI & Web">
+      <div class="card-content">
+        <h2>Artificial Intelligence Trends 2025</h2>
+        <p>Discover how AI is revolutionizing industries in 2025.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Tech Future">
+      <div class="card-content">
+        <h2>The Future of Web Development</h2>
+        <p>Explore how new technologies like Web3, VR, and quantum computing are changing the web landscape.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581093588401-012d7b1a0663?w=800" alt="Gadgets">
+      <div class="card-content">
+        <h2>Top 10 Gadgets of 2025</h2>
+        <p>From foldable phones to AI-powered wearables, here are the coolest tech gadgets to watch out for.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
